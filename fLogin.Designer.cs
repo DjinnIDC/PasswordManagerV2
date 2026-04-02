@@ -36,7 +36,7 @@
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(197, 224);
+            this.tbPassword.Location = new System.Drawing.Point(208, 219);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(128, 20);
@@ -56,7 +56,7 @@
             // 
             this.lblEnterPass.AutoSize = true;
             this.lblEnterPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblEnterPass.Location = new System.Drawing.Point(203, 192);
+            this.lblEnterPass.Location = new System.Drawing.Point(214, 187);
             this.lblEnterPass.Name = "lblEnterPass";
             this.lblEnterPass.Size = new System.Drawing.Size(114, 17);
             this.lblEnterPass.TabIndex = 3;
@@ -64,7 +64,7 @@
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(225, 275);
+            this.btnEnter.Location = new System.Drawing.Point(236, 270);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(75, 23);
             this.btnEnter.TabIndex = 4;
