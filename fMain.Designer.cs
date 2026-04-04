@@ -31,21 +31,22 @@
             this.dgvNames = new System.Windows.Forms.DataGridView();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.tbPassword = new System.Windows.Forms.TextBox();
-            this.tbLogin = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
             this.pnlTools = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnShowHide = new System.Windows.Forms.Button();
+            this.btnTogglePasswordVisibility = new System.Windows.Forms.Button();
             this.pnlAdd = new System.Windows.Forms.Panel();
-            this.tbNewLogin = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbNewPassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.tbNewName = new System.Windows.Forms.TextBox();
+            this.btnCancelAdd = new System.Windows.Forms.Button();
+            this.txtNewName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.txtNewLogin = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.lblLogin2 = new System.Windows.Forms.Label();
+            this.txtNewPassword = new System.Windows.Forms.TextBox();
+            this.lblLoginPass2 = new System.Windows.Forms.Label();
+            this.pnlMain = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNames)).BeginInit();
             this.pnlTools.SuspendLayout();
             this.pnlAdd.SuspendLayout();
@@ -84,28 +85,28 @@
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Пароль";
             // 
-            // tbPassword
+            // txtPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(202, 63);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(100, 20);
-            this.tbPassword.TabIndex = 3;
+            this.txtPassword.Location = new System.Drawing.Point(202, 63);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.TabIndex = 2;
             // 
-            // tbLogin
+            // txtLogin
             // 
-            this.tbLogin.Location = new System.Drawing.Point(27, 63);
-            this.tbLogin.Name = "tbLogin";
-            this.tbLogin.PasswordChar = '*';
-            this.tbLogin.Size = new System.Drawing.Size(100, 20);
-            this.tbLogin.TabIndex = 4;
+            this.txtLogin.Location = new System.Drawing.Point(27, 63);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.PasswordChar = '*';
+            this.txtLogin.Size = new System.Drawing.Size(100, 20);
+            this.txtLogin.TabIndex = 1;
             // 
             // pnlTools
             // 
             this.pnlTools.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlTools.Controls.Add(this.btnDelete);
             this.pnlTools.Controls.Add(this.btnAdd);
-            this.pnlTools.Controls.Add(this.btnShowHide);
+            this.pnlTools.Controls.Add(this.btnTogglePasswordVisibility);
             this.pnlTools.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTools.Location = new System.Drawing.Point(0, 0);
             this.pnlTools.Margin = new System.Windows.Forms.Padding(0);
@@ -133,28 +134,29 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnShowHide
+            // btnTogglePasswordVisibility
             // 
-            this.btnShowHide.ImageKey = "(отсутствует)";
-            this.btnShowHide.Location = new System.Drawing.Point(553, 5);
-            this.btnShowHide.Margin = new System.Windows.Forms.Padding(5);
-            this.btnShowHide.Name = "btnShowHide";
-            this.btnShowHide.Size = new System.Drawing.Size(40, 40);
-            this.btnShowHide.TabIndex = 0;
-            this.btnShowHide.Tag = "active";
-            this.btnShowHide.UseVisualStyleBackColor = true;
-            this.btnShowHide.Click += new System.EventHandler(this.btnPChar_Click);
+            this.btnTogglePasswordVisibility.ImageKey = "(отсутствует)";
+            this.btnTogglePasswordVisibility.Location = new System.Drawing.Point(553, 5);
+            this.btnTogglePasswordVisibility.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTogglePasswordVisibility.Name = "btnTogglePasswordVisibility";
+            this.btnTogglePasswordVisibility.Size = new System.Drawing.Size(40, 40);
+            this.btnTogglePasswordVisibility.TabIndex = 0;
+            this.btnTogglePasswordVisibility.Tag = "active";
+            this.btnTogglePasswordVisibility.UseVisualStyleBackColor = true;
+            this.btnTogglePasswordVisibility.Click += new System.EventHandler(this.btnTogglePasswordVisibility_Click);
             // 
             // pnlAdd
             // 
             this.pnlAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlAdd.Controls.Add(this.tbNewName);
+            this.pnlAdd.Controls.Add(this.btnCancelAdd);
+            this.pnlAdd.Controls.Add(this.txtNewName);
             this.pnlAdd.Controls.Add(this.lblName);
-            this.pnlAdd.Controls.Add(this.tbNewLogin);
+            this.pnlAdd.Controls.Add(this.txtNewLogin);
             this.pnlAdd.Controls.Add(this.btnSave);
-            this.pnlAdd.Controls.Add(this.label2);
-            this.pnlAdd.Controls.Add(this.tbNewPassword);
-            this.pnlAdd.Controls.Add(this.label1);
+            this.pnlAdd.Controls.Add(this.lblLogin2);
+            this.pnlAdd.Controls.Add(this.txtNewPassword);
+            this.pnlAdd.Controls.Add(this.lblLoginPass2);
             this.pnlAdd.Location = new System.Drawing.Point(212, 50);
             this.pnlAdd.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAdd.Name = "pnlAdd";
@@ -162,69 +164,22 @@
             this.pnlAdd.TabIndex = 6;
             this.pnlAdd.Visible = false;
             // 
-            // tbNewLogin
+            // btnCancelAdd
             // 
-            this.tbNewLogin.Location = new System.Drawing.Point(137, 63);
-            this.tbNewLogin.Name = "tbNewLogin";
-            this.tbNewLogin.Size = new System.Drawing.Size(100, 20);
-            this.tbNewLogin.TabIndex = 10;
+            this.btnCancelAdd.Location = new System.Drawing.Point(106, 135);
+            this.btnCancelAdd.Name = "btnCancelAdd";
+            this.btnCancelAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelAdd.TabIndex = 4;
+            this.btnCancelAdd.Text = "Отмена";
+            this.btnCancelAdd.UseVisualStyleBackColor = true;
+            this.btnCancelAdd.Click += new System.EventHandler(this.btnCancelAdd_Click);
             // 
-            // btnSave
+            // txtNewName
             // 
-            this.btnSave.Location = new System.Drawing.Point(18, 135);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Сохранить";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(134, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Логин";
-            // 
-            // tbNewPassword
-            // 
-            this.tbNewPassword.Location = new System.Drawing.Point(253, 63);
-            this.tbNewPassword.Name = "tbNewPassword";
-            this.tbNewPassword.Size = new System.Drawing.Size(100, 20);
-            this.tbNewPassword.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(250, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Пароль";
-            // 
-            // pnlMain
-            // 
-            this.pnlMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMain.Controls.Add(this.lblLogin);
-            this.pnlMain.Controls.Add(this.lblPassword);
-            this.pnlMain.Controls.Add(this.tbPassword);
-            this.pnlMain.Controls.Add(this.tbLogin);
-            this.pnlMain.Location = new System.Drawing.Point(213, 50);
-            this.pnlMain.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(385, 713);
-            this.pnlMain.TabIndex = 7;
-            // 
-            // tbNewName
-            // 
-            this.tbNewName.Location = new System.Drawing.Point(18, 63);
-            this.tbNewName.Name = "tbNewName";
-            this.tbNewName.Size = new System.Drawing.Size(100, 20);
-            this.tbNewName.TabIndex = 12;
+            this.txtNewName.Location = new System.Drawing.Point(18, 63);
+            this.txtNewName.Name = "txtNewName";
+            this.txtNewName.Size = new System.Drawing.Size(100, 20);
+            this.txtNewName.TabIndex = 1;
             // 
             // lblName
             // 
@@ -236,13 +191,70 @@
             this.lblName.TabIndex = 11;
             this.lblName.Text = "Название";
             // 
+            // txtNewLogin
+            // 
+            this.txtNewLogin.Location = new System.Drawing.Point(137, 63);
+            this.txtNewLogin.Name = "txtNewLogin";
+            this.txtNewLogin.Size = new System.Drawing.Size(100, 20);
+            this.txtNewLogin.TabIndex = 2;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(18, 135);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Сохранить";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // lblLogin2
+            // 
+            this.lblLogin2.AutoSize = true;
+            this.lblLogin2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblLogin2.Location = new System.Drawing.Point(134, 29);
+            this.lblLogin2.Name = "lblLogin2";
+            this.lblLogin2.Size = new System.Drawing.Size(47, 17);
+            this.lblLogin2.TabIndex = 7;
+            this.lblLogin2.Text = "Логин";
+            // 
+            // txtNewPassword
+            // 
+            this.txtNewPassword.Location = new System.Drawing.Point(253, 63);
+            this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtNewPassword.TabIndex = 3;
+            // 
+            // lblLoginPass2
+            // 
+            this.lblLoginPass2.AutoSize = true;
+            this.lblLoginPass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblLoginPass2.Location = new System.Drawing.Point(250, 29);
+            this.lblLoginPass2.Name = "lblLoginPass2";
+            this.lblLoginPass2.Size = new System.Drawing.Size(57, 17);
+            this.lblLoginPass2.TabIndex = 8;
+            this.lblLoginPass2.Text = "Пароль";
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMain.Controls.Add(this.lblLogin);
+            this.pnlMain.Controls.Add(this.lblPassword);
+            this.pnlMain.Controls.Add(this.txtPassword);
+            this.pnlMain.Controls.Add(this.txtLogin);
+            this.pnlMain.Location = new System.Drawing.Point(213, 50);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(385, 713);
+            this.pnlMain.TabIndex = 7;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 762);
-            this.Controls.Add(this.dgvNames);
             this.Controls.Add(this.pnlAdd);
+            this.Controls.Add(this.dgvNames);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlTools);
             this.Name = "fMain";
@@ -263,20 +275,21 @@
         private System.Windows.Forms.DataGridView dgvNames;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.TextBox tbLogin;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Panel pnlTools;
-        private System.Windows.Forms.Button btnShowHide;
+        private System.Windows.Forms.Button btnTogglePasswordVisibility;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel pnlAdd;
-        private System.Windows.Forms.TextBox tbNewLogin;
+        private System.Windows.Forms.TextBox txtNewLogin;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbNewPassword;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLogin2;
+        private System.Windows.Forms.TextBox txtNewPassword;
+        private System.Windows.Forms.Label lblLoginPass2;
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.TextBox tbNewName;
+        private System.Windows.Forms.TextBox txtNewName;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button btnCancelAdd;
     }
 }
